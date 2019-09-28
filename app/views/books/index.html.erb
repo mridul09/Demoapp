@@ -1,0 +1,23 @@
+<h1>List of Books</h1>
+
+<div>
+	<% @books.each do |element| %>
+
+		<p>================================</p>
+			Name of Book:<%= element.book_title %>
+				<div>
+					<p>Details of the author</p>
+					<% element.authors.each do |author|%>
+						<p>-------------------</p>
+							First Name : <%= author.first_name%>
+							last Name : <%= author.last_name%>
+							DOB : <%= author.date_of_birth%>
+						<br />
+					<%end%>
+				</div>
+			<br />
+			<%= link_to '<button type="button">edit</button>'.html_safe, edit_book_path(element) %>
+			<%= link_to 'Destroy', book_path(element),
+            data: {:confirm => 'Are you sure?'}, :method => :delete %>
+	<% end %>
+</div>

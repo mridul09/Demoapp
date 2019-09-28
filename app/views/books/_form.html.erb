@@ -1,0 +1,9 @@
+<%= form_for(@book) do |f| %>
+    <%= f.label :Title %>
+    <%= f.text_field :book_title %>
+	    <% for author in Author.all %> 
+		        <%= check_box_tag 'authors[]', author.id %>  
+		        <%= author.first_name %>   
+		  <% end %>
+    <%= submit_tag "create" %>
+  <% end %>

@@ -1,0 +1,17 @@
+<h1>List of Authors</h1>
+
+<div>
+	<% @authors.each do |element| %>
+
+		<p>================================</p>
+			First name:<%= element.first_name %>
+			<br/>
+			Last name:<%= element.last_name %>
+			<br />
+			date of Birth :<%= element.date_of_birth %>
+			<br />
+			<%= link_to '<button type="button">edit</button>'.html_safe, edit_author_path(element) %>
+			<%= link_to 'Destroy', author_path(element),
+            data: {:confirm => 'Are you sure?'}, :method => :delete %>
+	<% end %>
+</div>

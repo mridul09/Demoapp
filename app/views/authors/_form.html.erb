@@ -1,0 +1,9 @@
+<%= form_for(@author) do |f| %>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+    <%= f.label :date_of_birth %>
+    <%= f.text_field :date_of_birth %>
+    <%= submit_tag "Submit" %>
+  <% end %>
