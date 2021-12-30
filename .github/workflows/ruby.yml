@@ -6,9 +6,9 @@ jobs:
     env:
       MYSQL_HOST: 127.0.0.1
       MYSQL_DB: github_action_test
-      MYSQL_USER: root
+      MYSQL_USER: ap_lp
       MYSQL_ALLOW_EMPTY_PASSWORD: yes
-      MYSQL_PASSWORD: 
+      MYSQL_PASSWORD: tes
     steps:
       - name: set up Mysql
         run: |
