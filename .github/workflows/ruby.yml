@@ -2,7 +2,7 @@ name: Ruby
 on: [push]
 jobs:
   test:
-    runs-on: ubantu-20.04
+    runs-on: ubuntu-20.04
     env:
       MYSQL_HOST: 127.0.0.1
       MYSQL_DB: github_action_test
