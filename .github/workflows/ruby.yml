@@ -6,7 +6,7 @@ on:
     branches: [ master ]
 jobs:
   test:
-    runs-on: ubantu-20.0.4
+    runs-on: ubantu-20.04
     env:
       MYSQL_HOST: 127.0.0.1
       MYSQL_DB: github_action_test
