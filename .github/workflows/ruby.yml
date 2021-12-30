@@ -1,9 +1,5 @@
 name: Ruby
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: [push]
 jobs:
   test:
     runs-on: ubantu-20.04
