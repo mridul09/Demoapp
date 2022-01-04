@@ -7,20 +7,7 @@ jobs:
       MYSQL_HOST: 127.0.0.1
       MYSQL_DB: github_action_test
       MYSQL_USER: ap_lp
-      MYSQL_ALLOW_EMPTY_PASSWORD: yes
-      MYSQL_PASSWORD: tes
-    services:
-      mysql:
-        image: mysql
-        env:
-          MYSQL_ALLOW_EMPTY_PASSWORD: yes
-        ports:
-          - 3306:3306
-        options: >-
-          --health-cmd "mysqladmin ping"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
+      MYSQL_ROOT_PASSWORD: root
     steps:
       - name: set up Mysql
         run: |
