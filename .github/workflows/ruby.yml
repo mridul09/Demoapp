@@ -9,6 +9,18 @@ jobs:
       MYSQL_USER: ap_lp
       MYSQL_ALLOW_EMPTY_PASSWORD: yes
       MYSQL_PASSWORD: tes
+    services:
+      mysql:
+        image: mysql
+        env:
+          MYSQL_ALLOW_EMPTY_PASSWORD: yes
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd "mysqladmin ping"
+          --health-intervals 10s
+          --health-timeout 5s
+          --health-retries 5
     steps:
       - name: set up Mysql
         run: |
